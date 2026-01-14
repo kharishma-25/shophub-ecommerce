@@ -34,6 +34,9 @@ public class Order {
     @Column(nullable = false)
     private BigDecimal totalAmount;
 
+    @Column(nullable = false, length = 3)
+    private String currency = "USD"; // ISO 4217 currency code (e.g., USD, EUR, GBP)
+
     @Enumerated(EnumType.STRING)
     private OrderStatus status = OrderStatus.PENDING;
 

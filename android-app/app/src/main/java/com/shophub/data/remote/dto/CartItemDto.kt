@@ -8,5 +8,6 @@ data class CartItemDto(
     @SerializedName("productName") val productName: String,
     @SerializedName("productImageUrl") val productImageUrl: String?,
     @SerializedName("quantity") val quantity: Int,
-    @SerializedName("price") val price: Double
+    @SerializedName("price") val price: Double,
+    @SerializedName("currency") val currency: String = "USD"
 )

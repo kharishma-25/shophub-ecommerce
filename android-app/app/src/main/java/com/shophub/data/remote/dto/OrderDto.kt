@@ -7,9 +7,10 @@ data class OrderDto(
     @SerializedName("userId") val userId: Long,
     @SerializedName("items") val items: List<OrderItemDto>,
     @SerializedName("totalAmount") val totalAmount: Double,
+    @SerializedName("currency") val currency: String = "USD",
     @SerializedName("status") val status: String, // PENDING, PROCESSING, SHIPPED, DELIVERED, CANCELLED
     @SerializedName("shippingAddress") val shippingAddress: String,
     @SerializedName("paymentMethod") val paymentMethod: String,
-    @SerializedName("createdAt") val createdAt: String?,
-    @SerializedName("updatedAt") val updatedAt: String?
+    @SerializedName("createdAt") val createdAt: String?, // ISO 8601 format
+    @SerializedName("updatedAt") val updatedAt: String?  // ISO 8601 format
 )

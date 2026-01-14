@@ -12,5 +12,6 @@ data class CartItem(
     val productName: String,
     val productImageUrl: String?,
     val quantity: Int,
-    val price: Double
+    val price: Double,
+    val currency: String = "USD" // ISO 4217 currency code (e.g., USD, EUR, GBP)
 )

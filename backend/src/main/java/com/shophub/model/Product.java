@@ -31,6 +31,9 @@ public class Product {
     @Column(nullable = false)
     private BigDecimal price;
 
+    @Column(nullable = false, length = 3)
+    private String currency = "USD"; // ISO 4217 currency code (e.g., USD, EUR, GBP)
+
     private Integer stockQuantity;
     private String imageUrl;
     private String category;
